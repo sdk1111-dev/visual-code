@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <!--초기화-->
+    <style>
+        #main_header {
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
+    <!--헤더-->
+    <style>
+        #title {
+            font-family: 'Sonsie One', cursive;
+        }
+    </style>
+    <!--타이틀-->
+    <style>
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid black;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+
+        #main_gnb>ul>li:first-child> {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_gnb>ul>li>li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+    <!--메뉴(1)-->
+    <style>
+        #main_lnb>ul {
+            overflow: hidden;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #main_lnb>ul>li>a:hover {
+            background: black;
+            color: white;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+    <!--메뉴(2)-->
+    <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>#main_section {
+            width: 750px;
+            float: left;
+        }
+
+        #content>#main_aside {
+            width: 200px;
+            float: right;
+        }
+    </style>
+    <!--콘텐츠-->
+    <style>
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <!--본문-->
+    <style>
+        input:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block;
+        }
+
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block;
+        }
+
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons>label {
+            display: block;
+            float: left;
+
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+
+            box-sizing: border-box;
+            border: 1px solid black;
+
+            background: black;
+            color: white;
+        }
+
+        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+            background:  white;
+            color: black
+        }
+
+        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+            background: black;
+            color: white;
+        }
+    </style>
+    <!--사이드-->
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+        }
+
+        .thumbnail {
+            float: left;
+        }
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description > strong {
+            display: block;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <!--목록-->
+    <style>
+        #main_footer {
+            width: 960px; margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+    <!--푸터-->
+
+
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>Rint Devedlopment</h1>
+            <h2>HTML5 + CSS3 Basic</h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulator</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Do minim do amet est minim cOccaecat ex do tempor sint reprehenderit voluptate Lorem officia Lorem
+                    culpa. Occaecat ea enim esse minim consectetur reprehenderit. Ut laborum do pariatur aliqua esse qui
+                    culpa sunt sint magna labore occaecat. Duis et aliqua ea cillum excepteur tempor. Mollit nulla minim
+                    culpa sint id nostrud pariatur dolor ea tempor ea labore proident nisi. Nostrud id eu nostrud
+                    consectetur cillum Lorem ad eiusmod occaecat. Aliqua irure esse nisi culpa.illum veniam ipsum. Amet
+                    occaecat aute ciAmet ut laborum cillum minim labore irure do ad dolore in ullamco. Nisi dolor labore
+                    cillum ea. Laborum velit aute consequat veniam dolor voluptate nisi dolor dolor labore dolore.
+                    Deserunt proident in elit duis non adipisicing laborum. Aliqua qui et labore culpa veniam aute culpa
+                    ut sit deserunt pariatur adipisicing nostrud.llum cupidatat laboris consequat duis eiusmod occaecat
+                    et. Velit ullamco dolore officia in est aute cillum do et ad adipisicing. Enim eiusmod pariatur
+                    minim veniam aliquip. Magna Lorem nisi mollit sint irure culpa amet est quis est elit proident. In
+                    commodo adipisicing consectetur in aliqua dolore cillum et.Nulla esse labore est non. Dolore ipsum
+                    aliquip elit proident fugiat exercitation Lorem do dolor culpa sint velit do eiusmod.</p>
+            </article>
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Do minim do amet est minim cillum vVeniam cillum do est labore. Anim labore culpa laborum dolor
+                    mollit laboris esse in sunt veniam veniam deserunt aliquip reprehenderit. Aute cupidatat minim velit
+                    labore est officia fugiat ea nisi exercitation minim laborum exercitation velit. Est Lorem ea ex
+                    cupidatat occaecat ut excepteur laboris exercitation mollit do aliqua enim. Sint cillum sit
+                    adipisicing aliquip ex sit aute eu id pariatur sunt fugiat nisi aliquip.eniam ipsum. Consectetur
+                    proExercitation non in amet nostrud elit cupidatat. Anim enim et in fugiat commodo labore dolore.
+                    Reprehenderit reprehenderit est cupidatat ut officia quis id. Aute id esse adipisicing ea voluptate
+                    adipisicing anim dolore culpa adipisicing occaecat incididunt laborum. Proident dolore anim
+                    consectetur dolore fugiat non deserunt et incididunt. Irure commodo nulla aliquip proident aliqua
+                    cillum qui. Ex amet labore magna ut nostrud elit velit.ident sit non qui nostrud velit excepteur
+                    exercitation. Ullamco laborum excepteur consequat nisi cillum elit cillum exercitation quis est
+                    nulla. Laboris nostrud id elit culpa anim anim ipsum sint. Ea incididunt exercitation et ullamco
+                    adipisicing irure ullamco deserunt sunt fugiat nostrud. Occaecat voluptate occaecat ut mollit
+                    consequat enim incididunt nulla in esse fugiat exercitation. Ex dolore elit velit ullamco dolore ut
+                    adipisicing pariatur anim officia.Nulla esse labore est non. Dolore ipsum aliquip elit proident
+                    fugiat exercitation Lorem do dolor culpa sint velit do eiusmod.</p>
+            </article>
+            <article class="main_article">
+                <h1>Main Article</h1>
+                <p>Do minim do amet est minEnim quis velit velit eiusmod aliquip labore ad amet duis exercitation
+                    laborum Lorem in. Magna nulla et eiusmod officia velit aliqua aute. Consectetur esse laborum enim
+                    enim Lorem do. Adipisicing laboris sunt ullamco enim labore ad elit proident minim do quis nisi
+                    quis. Commodo magna cupidatat laboris ea laboris veniam cupidatat mollit. Duis veniam consequat
+                    voluptate dolor cupidatat cupidatat deserunt elit nostrud. Ut fugiat sunt consequat ea.im cillum
+                    veniam ipsum. Dolore laboVeniam eiusmod amet nisi laboris officia dolore elit et. Esse ad aute
+                    tempor excepteur laborum. Ea qui veniam dolor veniam sunt non ullamco. Eiusmod aliquip Lorem
+                    occaecat officia nulla reprehenderit deserunt. Est amet Lorem mollit excepteur non sit cillum
+                    veniam.ris velit laborum irure veniam dolor deserunt. Occaecat aliqua reprehenderit ut Lorem
+                    voluptate aliquip duis id veniam et consectetur. Voluptate adipisicing elit cillum sint et fugiat
+                    mollit laborum. Dolore nostrud tempor in Lorem enim anim quis reprehenderit dolor eiusmod ut nisi.
+                    Commodo aliqua magna ea aliquip dolor nulla magna esse anim. Ut eu est exercitation sit laborum
+                    aliquip Lorem exercitation ut duis ex officia velit.Nulla esse labore est non. Dolore ipsum aliquip
+                    elit proident fugiat exercitation Lorem do dolor culpa sint velit do eiusmod.</p>
+            </article>
+
+
+        </section>
+        <aside id="main_aside">
+            <input type="radio" name="tab" id="first" checked>
+            <input type="radio" name="tab" id="second">
+            <section class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>HTML5 Canvas</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>HTML5 Audio</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>HTML5 Video</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>HTML5 Semantic Web</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""/></div>
+                            <div class="description"><strong>CSS3 Transition</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>CSS3 Animation</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>CSS3 Border</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="http://placehold.it/45x45" alt=""></div>
+                            <div class="description"><strong>CSS3 Box</strong>
+                                <p>2020.05.22</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+    </div>
+<footer id="main_footer">
+<h3>HTML5 + CSS3 Basic</h3>
+<address> Website Layout Basic</address>
+</footer>
+
+
+
+</body>
+
+</html>
