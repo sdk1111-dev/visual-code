@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 100px; height: 100px;
+        position: relative;
+    }
+
+    .red {
+        background-color: red;
+        left: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+
+    .green {
+        background-color: green;
+     
+        left: 20px;
+        top: 20px;
+        z-index: 10;
+    }
+
+    .blue {
+        background-color: blue;
+
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+    }
+
+    body>div {
+        width: 400px;
+        height: 100px;
+        border: 3px solid black;
+        position: relative;
+        overflow: scroll;
+    }
+</style>
+
+<body>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, at et laudantium ut, quo sed, molestias accusantium rem pariatur perferendis molestiae quibusdam ab blanditiis voluptas inventore ex illum similique qui.</h1>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit unde voluptatem accusantium? Dolores impedit temporibus nobis, ea dolorum quam quis quisquam deserunt voluptatum quaerat non, aliquid a? Sit, recusandae possimus!</h1>
+</body>
+
+</html>

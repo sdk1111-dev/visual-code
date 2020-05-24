@@ -1,0 +1,68 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+    <!-- 출처: https://webclub.tistory.com/254 [Web Club] (안혜주님) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*(body 안에 있는 것 = body의 자손)*/
+        /* 두 개의 스타일이 중첩되는 경우에는 나중에 작성된 것이 적용됨*/
+
+
+        /*p타입들 중 가장 첫 번째*/
+        /*1. body의 자손 중에서 처음으로 등장하는 p에 적용*/
+        /*2. 그 이후에는 body 태그 안의 div 같은 태그 안에서 처음으로 등장하는 p에 적용됨*/
+        p:first-of-type {
+            color: red
+        }
+
+        /*가장 첫번째 태그가 p인 경우에만 적용됨*/
+        /*(body 안에 있는 것 = body의 자손)자손 중에서 가장 첫번째로 와야지만 적용이 됨.(얘가 첫 번째로 안 오면 적용 안 됨)
+        last나 n번째 수열의 경우에도 p태그가 지정한 순서에 와야지만 
+        적용이 됨.
+        -of-type는 해당하는 타입을 직접 카운팅하지만 이건 카운팅하지 않는다.*/
+        span p:first-child {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>text1</p>
+    <p>text2</p>
+    <!-- 구조선택자 재설명 137p, 3.11-->
+    <!-- 
+        사이트 참조하기
+
+        일반 구조 선택자
+        first-child : 형제 관계중에서 첫번째에 위치한 태그
+        => 하위 
+        last-child : 형제 관계중에서 마지막에 위치한 태그
+
+        형태구조 선택자 -->
+    <!-- 
+            first-of-type : 형제 관계중에서 첫 번째로 등장하는 특정 태그
+            last-of-type: 형제 관계중에서 마지막 번째로 등장하는 특정 태그
+        -->
+    <div>
+        <p>text3</p>
+        <p>text4</p>
+        <p>text5</p>
+        <div>
+            <p>12345_6</p>
+            <p>text7</p>
+        </div>
+    </div>
+    <span>
+        <p>11111_8</p>
+        <p>11112_9</p>
+        <p>11113_10</p>
+        <p>11114_11</p>
+        <p>11115_12</p>
+    </span>
+
+</body>
+
+</html>
