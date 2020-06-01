@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+             margin: 0;
+             padding: 0;
+        }
+
+        .icon
+        {
+            display: block; /*인라인 형식은 width, height 적용 안 됨*/
+        }
+        .bg-header_left_button {
+            width: 62px;
+            height: 32px;
+            background: url('css_sprites.png') -1px -1px;
+        }
+
+        .bg-header_right_button {
+            width: 32px;
+            height: 32px;
+            background: url('css_sprites.png') -65px -1px;
+        }
+
+        #main_header
+        {
+            /*수직 정렬을 위해서 이렇게 함*/
+            height:45px;
+            line-height: 45px;
+
+            text-align: center;
+
+            background: url(header_background.png);
+
+            position: relative;
+        }
+
+        #main_header>h1
+        {
+            color: white;
+        }
+
+        .bg-header_left_button
+        {
+            position: absolute;
+            left:5px;
+            top:7px;
+        }
+
+        .bg-header_right_button
+        {
+            position: absolute;
+            right:5px;
+            top:7px;
+        }
+        #bottom_gnb
+        {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid black;
+            display: table;
+        }
+        #bottom_gnb>div
+        {
+            display: table-cell;
+            text-align:center;
+
+        }
+
+        #bottom_gnb>div>a
+        {
+            display:block;
+            height: 35px;
+            line-height: 35px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main_header">
+            <i class="icon bg-header_left_button"></i>
+            <h1>Mobile</h1>
+            <i class="icon bg-header_right_button"></i>
+        </div>
+        <div id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </table>
+    </div>
+</body>
+
+</html> 
