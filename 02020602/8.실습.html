@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap
+        {
+            width: 200px;
+            height: 200px;
+            position: relative;
+          
+
+
+        }
+
+
+        .box
+        {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            ;
+        }
+        .box
+        {
+            opacity: 0.3;
+        }
+
+        @keyframes identifier {
+        form
+        {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        to
+        {
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+        .box:nth-child(1){ background-color: burlywood;}
+        .box:nth-child(2){ background-color: chartreuse;}
+        .box:nth-child(3){ background-color: coral;}
+        .box:nth-child(4){ background-color: crimson;}
+        .box:nth-child(5){ background-color: darkblue;}
+        .box:nth-child(6){ background-color: darkgreen;}
+
+
+        .box:nth-child(1){ transform: translate3d(0px,0px,100px);}
+        .box:nth-child(2){ transform: rotateY(90deg) translate3d(0px,0px,100px);}
+        .box:nth-child(3){ transform: rotateY(180deg) translate3d(0px,0px,100px);}
+        .box:nth-child(4){ transform: rotateY(270deg) translate3d(0px,0px,100px);}
+
+        .box:nth-child(5){ transform: rotateX(90deg) translate3d(0px,0px,100px);}
+        .box:nth-child(6){ transform: rotateX(270deg) translate3d(0px,0px,100px);}
+
+
+
+
+        .wrap
+        {
+            left : 100px;
+            top : 100px;
+            transform-style: preserve-3d;
+            animation-name: identifier;
+            animation-duration: 5s;
+
+        }
+        body
+        {
+            -webkit-perspective: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>
