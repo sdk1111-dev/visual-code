@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Htlvetica', 'snas-serif';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            height: 45px;
+            background: url('header_background.png');
+            position: relative;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        #main_header>h1 {
+            color: white;
+        }
+
+        #main_header>a,
+
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+        }
+    </style>
+    <!-- 스프라이트 이미지 -->
+    <style>
+        #main_header>a.left {
+            background: url('sprites.png');
+            background-position: 0px 0px;
+            text-indent: -99999px;
+        }
+
+        #main_header>label.right {
+            background: url('sprites.png');
+            background-position: -62px 0px;
+            text-indent: -99999px;
+        }
+    </style>
+    <!-- 토글목록 -->
+    <style>
+        #toggle {
+            display: none;
+        }
+
+        #toggle+#wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: #363636;
+            padding: 15px;
+
+        }
+
+        #toggle_gnb {
+            background: #ffffff;
+            padding: 5px;
+
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+
+        }
+
+        #toggle_gnb>ul li {
+            width: 80px;
+            float: left;
+        }
+    </style>
+
+    <!-- 네비게이션(1) -->
+    <style>
+        #top_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #b42111;
+
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <!-- 네비게이션(2) -->
+    <style>
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+
+        }
+
+        #bottom_gnb>div {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb>div>a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+
+        }
+
+        #bottom_gnb>div>a::before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+
+        }
+    </style>
+    <!-- 본문 -->
+    <style>
+        #section_header {
+            padding: 20px;
+        }
+
+        #section_article {
+            padding: 10px;
+        }
+    </style>
+    <!--푸터-->
+    <style>
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wwrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="main_header">
+                <h1>
+                    Ipsum dolor sit amet, consectetur adipisicing elit. Velit modi inventore nostrum ipsum ipsa.
+                </h1>
+                <time>2020-05-24</time>
+            </header>
+            <article id="section_article">
+                <p>Adipisicing et aliqua deserunt velit amet non adipisicing sint incididunt velit. Enim ex labore
+                    ullamco proident aliquip duis irure eu. Velit velit consectetur est consectetur velit consectetur
+                    est exercitation ut exercitation sint incididunt. Sit ullamco irure mollit commodo incididunt aute
+                    laborum ut excepteur Lorem. Velit officia consequat aliqua consectetur ut laborum deserunt ad do. Do
+                    sint et adipisicing aliquip aute ut nisi. Officia et do officia mollit adipisicing.</p>
+                <p>loremTempor nisi mollit est adipisicing occaecat duis consequat nisi ut sunt est. Dolore in id ipsum
+                    ad nisi qui reprehenderit aute. Sit non cillum esse nostrud sunt non fugiat.
+
+                    Irure voluptate ad sit eiusmod tempor mollit adipisicing do. Consequat eiusmod id consequat in
+                    pariatur velit. Aute eu aliqua eu magna adipisicing labore excepteur consectetur. Consequat dolore
+                    veniam laboris occaecat. Eu excepteur excepteur id consectetur deserunt enim ipsum velit duis. Quis
+                    do laborum proident pariatur id sunt ad.
+
+                    Lorem consectetur id eiusmod anim exercitation ad adipisicing fugiat consequat id. Sit aliqua ad
+                    velit incididunt proident anim id. Culpa irure reprehenderit nostrud ad fugiat ipsum.
+
+                    Non Lorem aliquip non est non esse. Esse do excepteur in commodo mollit veniam cupidatat nisi
+                    consequat mollit. Do amet velit pariatur reprehenderit pariatur irure voluptate est ad culpa aliqua
+                    sunt nisi. In ad nostrud tempor aliquip amet aliqua culpa qui elit dolor cupidatat aliqua excepteur.
+                    Veniam laboris sit sit sunt officia ipsum consectetur sit eu aute nulla. Ipsum labore aliqua laborum
+                    commodo ea commodo eu adipisicing laborum nostrud enim.
+
+                    Lorem et Lorem et elit nostrud elit adipisicing laborum Lorem voluptate sint consequat. Est proident
+                    nisi occaecat aliqua eu consectetur deserunt. Ipsum quis culpa culpa amet sit do sint ullamco duis
+                    eu. Dolore officia esse incididunt irure do.
+
+                    
+
+                    Reprehenderit officia do do magna nulla quis consequat nisi. Consectetur amet dolor eu ex laborum
+                    minim amet ad in in. Ad labore nisi eu est officia ad nostrud pariatur. Et est incididunt irure
+                    eiusmod labore minim adipisicing culpa nulla incididunt. Veniam enim non aliqua non minim eu
+                    pariatur nulla sit consequat dolore.
+
+                    Incididunt proident ex Lorem pariatur ullamco nulla culpa consequat. Sit sunt ex est labore
+                    adipisicing officia elit quis veniam veniam commodo. Occaecat anim excepteur ullamco ea aute Lorem
+                    dolore pariatur fugiat minim. Cupidatat reprehenderit dolore adipisicing enim sit pariatur irure ad.
+
+                    Ea nulla officia ipsum anim ad commodo nisi labore dolore occaecat laboris non duis ea. Magna ad
+                    cupidatat labore ex officia do nulla laboris exercitation duis. Elit magna pariatur et aliquip elit
+                    fugiat voluptate. Eu cillum aliqua anim commodo qui. Commodo in consectetur minim non incididunt
+                    aliquip est tempor id ipsum amet Lorem minim sit. Pariatur sint deserunt officia ipsum proident.
+
+                    Sunt fugiat ea do excepteur aliquip sint ad officia dolore quis in Lorem consectetur consequat. Sunt
+                    exercitation nulla culpa reprehenderit eiusmod nisi consequat cillum consequat id occaecat quis
+                    minim. Irure in ut nisi et dolor anim pariatur sit commodo irure aute. Cillum in elit sunt sit
+                    cupidatat dolore veniam id labore et adipisicing velit culpa.
+
+                    Laboris nisi reprehenderit quis aute veniam laboris officia velit labore duis. Do Lorem consequat
+                    officia incididunt Lorem. Anim ullamco est quis nostrud. Irure consectetur ullamco ea qui labore.
+                </p>
+            </article>
+        </section>
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 + Basic</h3>
+            <address>Website Layout Basic</address>
+
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
