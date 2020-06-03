@@ -1,0 +1,22 @@
+폰트 정보
+
+<link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=DM+Mono:ital@1&display=swap"
+        rel="stylesheet" type="text/css">
+
+JAVA
+    font-size: 100px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(27, 41, 231, 0.842);
+    font-style: italic;
+    text-shadow: -10px -3px 4px rgba(96, 117, 150, 0.95);
+
+
+No Pain No Gain
+    font-size: 16px;
+    height: 25px;
+    left: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(80, 23, 172, 0.548);
+    font-style: oblique;
+    text-shadow: -10px -3px 4px rgba(96, 117, 150, 0.95);
