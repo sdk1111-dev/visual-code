@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+body
+{
+    font-family: sans-serif;
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+#main_header
+{
+    width: 960px;
+    margin: 0 auto;
+
+    height: 300px;
+    position: relative;
+}
+#main_header>#main_gnb
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#main_header>#main_audio
+{
+    position: absolute;
+    left: 20px;
+}
+#main_header>#title
+{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    text-align: center;
+}
+
+#main_header>#form
+{
+    position: absolute;
+    width: 100px;
+    top:190px;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+#inputSearch
+{
+    width: 300px;
+    height: 35;
+    vertical-align: middle;
+    border-style: inset;
+    border-radius: 30px;
+}
+#inputSumit
+{
+    background-color: white;
+    border-style: outset;
+    vertical-align: middle;
+    font-size:15px;
+    padding: 2px;
+}
+
+#main_header>#main_lnb
+{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+#title>a
+{
+    font-size: 100px;
+    text-decoration: none;
+    font-family: Cambria, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(67, 67, 224);
+    font-style: italic;
+    text-shadow: -10px -3px 4px rgb(129, 126, 126)
+}
+#title>p
+{
+    font-size: 16px;
+    height: 25px;
+    left: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucuda Sans', 'Aral', sans-serif;
+}

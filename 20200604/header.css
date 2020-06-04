@@ -1,0 +1,191 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: sans-serif;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+#main_header
+{
+    width: 960px;
+    margin: 0 auto;
+
+    height: 300px;
+    position: relative;
+}
+
+#main_header>#main_gnb
+{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+#main_header>#main_audio
+{
+    position:absolute;
+    left:20px;
+}
+
+#main_header>#title
+{
+    position: absolute;
+    width: 100%;
+    top:40px;
+    text-align: center;
+}
+
+#main_header>#form
+{
+    /* display: block; */ /*일단 빼보자*/
+    position: absolute;
+    width: 100%;
+    top: 190px;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+#inputSearch
+{
+    width: 300px;
+    height: 35px;
+    vertical-align: middle;
+    border-style: inset;
+    border-radius: 30px;   
+}
+#inputSubmit
+{
+    background-color: #F0F0F0;
+    border-style: outset;
+    vertical-align: middle;
+    font-size: 15px;
+    padding: 2px;
+}
+
+#main_header>#main_lnb
+{
+    position: absolute;
+    bottom: 10px;
+    left:37px
+}
+
+
+#title>a
+{
+    font-size: 100px;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(27, 41, 231, 0.842);
+    font-style: italic;
+    text-shadow: -10px -3px 4px rgba(96, 117, 150, 0.95);
+}
+
+#title>p
+{
+    font-size: 16px;
+    height: 25px;
+    left: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(80, 23, 172, 0.548);
+    font-style: oblique;
+    text-shadow: -10px -3px 4px rgba(96, 117, 150, 0.95);
+}
+
+#main_gnb>ul
+{
+    overflow: hidden;
+}
+#main_gnb>ul>li
+{
+    float: left;
+}
+#main_gnb>ul>li>a
+{
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(11, 111, 226, 0.575);
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 177px;    
+}
+#main_gnb>ul>li>a:hover
+{
+    color:white;
+}
+
+#main_gnb>ul>li:first-child>a
+{
+    border-radius: 10px 0 0 10px;
+}
+
+#main_gnb>ul>li:last-child>a
+{
+    border-radius: 0 10px 10px 0;
+}
+
+#main_lnb
+{
+    overflow: hidden;
+}
+
+#main_lnb>ul>li
+{
+    float:left;
+}
+
+#main_lnb>ul>li>a
+{
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(11, 111, 226, 0.575);
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 177px
+}
+
+#main_lnb>ul>li>a:hover
+{
+    color:white;
+}
+
+#main_lnb>ul>li:first-child>a
+{
+    border-radius: 10px 0 0 10px;
+}
+
+#main_lnb>ul>li:last-child>a
+{
+    border-radius: 0 10px 10px 0;
+}
+
+#main_footer
+{
+    width: 960px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+    padding:10px;
+    border:1px solid black;
+    text-align: center;
+}
