@@ -1,0 +1,32 @@
+.linearGradient(@start, @end) when (iscolor(@start)) and (iscolor(@end)) 
+{
+    background: @start;
+    background: -moz-linear-gradient(top, @start 0%, @end 100%);
+    background: -webkt-linear-gradient(top, @start 0%, @end 100%);
+    background: -o-linear-gradient(top, @start 0%, @end 100%);
+    background: -ms-linear-gradient(top, @start 0%, @end 100%);
+    background: linear-gradient(top, @start 0%, @end 100%);
+}
+
+.max (@a, @b) when (@a>@b) {width: @a;}
+.max (@a, @b) when (@a<@b) {width: @a;}
+.min (@a, @b) when (@a>@b) {width: @a;}
+.min (@a, @b) when (@a<@b) {width: @a;}
+
+.button(@width:20px, @height:100px, @radius:10px) {
+width: @width;
+height: @width;
+line-height: @height;
+text-align: center;
+border-radius: @radius;
+}
+div 
+{
+    .button();
+}
+div.container
+{
+    .max(100px, 200px);
+    .min(150px, 350px);
+
+}

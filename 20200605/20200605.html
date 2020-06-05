@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            width: 0;
+            padding: 0;
+
+        }
+        .container
+        {
+            width: 960px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 70px 1fr 70px /200px 1fr; 
+            gap: 10px;
+
+            grid-template-areas: 
+            'header header'
+            'asid section'
+            'footer footer';   
+        }
+        .container>div
+        {
+            background-color: aqua;
+        }
+
+        .header{grid-area: header;}
+        .aside{grid-area: aside;}
+        .section{grid-area: section;}
+        .footer{grid-area: footer;}
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam labore cumque impedit, adipisci odit mollitia placeat aliquam recusandae magni pariatur quos, distinctio dolor vel cum molestiae? Veniam facere tenetur tempore!</p>
+        </div>
+        <div class="aside">
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ratione unde expedita? Nihil debitis quis qui suscipit tempore dolores blanditiis perspiciatis rerum. Impedit laudantium distinctio quas vitae ut reprehenderit nihil?</p>
+        </div>
+        <div class="section">
+            <h1>section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero quis dolor minima possimus veritatis molestiae eligendi modi eaque? Fugiat commodi aliquam laudantium ex! Facere cum nisi totam earum eos!</p>
+        </div>
+        <div class="footer">
+            <h1>footer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta magni aliquam vel perspiciatis consequatur ullam. Harum labore magnam suscipit provident, sint possimus ab voluptate quisquam dolores itaque soluta ex natus!</p>
+        </div>
+    </div>
+</body>
+</html>
