@@ -1,0 +1,84 @@
+////////1번
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void main(void)
+{
+	double arr[3];
+	int i;
+	
+	for (i = 0; i < 3; i++)
+	{
+		printf("arr[%d]의 주소 : %p\n", i, arr+i);
+	}
+
+}
+
+////////2번
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void main(void)
+{
+	double arr[10] = { 1.1, 1.2, 1.3, 1.4, 1.5 };
+	double* dp = arr;
+	
+	int i;
+	
+	for (i = 0; i < 10; i++) //i++, dp++
+	{
+		printf("arr[%d]의 값 : %.2f\n", i, *dp); //*(dp+i)
+		dp++;
+	}
+
+}
+
+//////3번
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void main(void)
+{
+	int arr[10] = { 2,3,4,5,6,7,8,9,10,11 };
+	int* ip = arr;
+	
+	int i;
+	
+	printf("배열 : ");
+	for (i = 0; i < 10; i++, ip++) //i++, ip++
+	{
+		printf("%3d", *ip); //*(ip+i) // *ip
+	}
+	printf("\n");
+	printf("역순 : ");
+	ip = &arr[9];
+	for (i = 0; i < 10; i++, ip--)
+	{
+		printf("%3d", *ip);
+	}
+
+}
+
+///////////////4번
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void main(void)
+{
+	double arr[10] = { 2.5,3,4,5.9,6,7,8.0,9,10,11 };
+	int i;
+	double* dp = arr;
+	double sum = 0;
+	double avg = 0;
+
+	printf("배열값 : ");
+	for (i = 0; i < 10; i++, dp++) //arr+i
+	{
+		printf("%.2f  ", *dp);
+		sum += *dp;
+	}
+	printf("\n");
+	avg = sum / 10;
+	printf("평균 : %f\n", avg);
+}
